@@ -1,0 +1,19 @@
+version: 1.0
+runtime: nodejs22
+build:
+  commands:
+    build:
+      - npm ci
+      - npm run build
+run:
+  pre-run:
+    - npm ci --omit=dev
+  command: npm start
+  network:
+    port: 3000
+    env: PORT
+  env:
+    - name: NODE_ENV
+      value: "production"
+    - name: HOST
+      value: "0.0.0.0"
