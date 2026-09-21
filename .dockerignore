@@ -1,0 +1,14 @@
+node_modules
+dist
+.git
+.gitignore
+.env
+.env.*
+!.env.example
+*.log
+coverage
+README.md
+TESTING.md
+SECURITY.md
+apprunner.yaml
+scripts
